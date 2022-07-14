@@ -1,0 +1,6 @@
+.idea
+target/
+data/
+.DS_Store
+generated-code/
+.env
