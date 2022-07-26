@@ -1,0 +1,17 @@
+version: '3'
+services:
+  java-server:
+    build:
+      context: ./java-server
+    restart: always
+    ports:
+      - '8080:8080'
+
+  nodejs-server:
+    build:
+      context: ./nodejs-server
+    restart: always
+    ports:
+      - '3000:3000'
+    depends_on:
+      - java-server
